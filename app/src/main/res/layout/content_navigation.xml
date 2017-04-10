@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_nav"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.dell.ver_3.Navigation"
+    tools:showIn="@layout/app_bar_navigation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/border_style"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/pin"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="PIN"
+
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/main_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Switch_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+
+        android:gravity="center"
+        android:padding="8dp"
+        android:typeface="sans" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_column="1"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="0"
+                        android:src="@drawable/time" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Time PIN"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/time_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="0" />
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#f6f6f6" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_column="1"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="0"
+                        android:src="@drawable/date_img" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Date PIN"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/date_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="0" />
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#f6f6f6" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_column="1"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="0"
+                        android:src="@drawable/battery_img" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Battery PIN"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/battery_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="0" />
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#f6f6f6" />
+
+
+
+            </TableLayout>
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_modify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modifiers"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <RadioGroup
+            android:id="@+id/time_grp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/t_r1"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/t_r1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="12H" />
+
+            <RadioButton
+                android:id="@+id/t_r2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="24H" />
+
+            <RadioButton
+                android:id="@+id/t_r3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="Offset(+5)" />
+
+            <RadioButton
+                android:id="@+id/t_r4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="Offset(-5)" />
+
+            <RadioButton
+                android:id="@+id/t_r5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="Double" />
+
+            <RadioButton
+                android:id="@+id/t_r6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="Reverse" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:id="@+id/date_grp">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DD-MM"
+                android:id="@+id/d_r1"
+                android:layoutDirection="rtl"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MM-YY"
+                android:id="@+id/d_r2"
+                android:layoutDirection="rtl"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DD-YY"
+                android:id="@+id/d_r3"
+                android:layoutDirection="rtl"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="YYYY"
+                android:id="@+id/d_r4"
+                android:layoutDirection="rtl"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Double"
+                android:id="@+id/d_r5"
+                android:layoutDirection="rtl"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reverse"
+                android:id="@+id/d_r6"
+                android:layoutDirection="rtl"/>
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/battery_grp"
+            android:visibility="gone"
+            android:padding="8dp">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Battery PIN"
+                android:id="@+id/b_r1"
+                android:layoutDirection="rtl"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Offset(+5)"
+                android:id="@+id/b_r2"
+                android:layoutDirection="rtl"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Offset(-5)"
+                android:id="@+id/b_r3"
+                android:layoutDirection="rtl"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reverse"
+                android:id="@+id/b_r4"
+                android:layoutDirection="rtl"/>
+        </RadioGroup>
+    </FrameLayout>
+</LinearLayout>

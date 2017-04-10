@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dell.ver_3">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".Device_administration"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_permissions" />
+             
+            <intent-filter>
+                                
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+                                
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLE_REQUESTED" />
+                                
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLED" />
+                                
+                <action android:name="android.app.action.ACTION_PASSWORD_CHANGED" />
+                                
+                <action android:name="android.app.action.ACTION_PASSWORD_EXPIRING" />
+                                
+                <action android:name="android.app.action.ACTION_PASSWORD_FAILED" />
+                                
+                <action android:name="android.app.action.ACTION_PASSWORD_SUCCEEDED" />
+                            
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Permission"
+            android:label="@string/title_activity_permission"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Master_password"
+            android:label="@string/title_activity_master_password"
+            android:noHistory="true"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Login" />
+        <activity
+            android:name=".Navigation"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".Background_service"
+            android:exported="false" />
+
+        <activity android:name=".Forget_password" />
+
+        <activity android:name=".Tutorial" />
+    </application>
+
+</manifest>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Ver_4</string>
+    <string name="title_activity_permission">Permission</string>
+    <string name="title_activity_master_password">Master Password SETUP</string>
+    <string name="title_activity_navigation">Navigation</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="Enable_Main_switch_above">Enable MASTER switch above</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_master_pass_nav">Master_pass_nav</string>
+
+</resources>

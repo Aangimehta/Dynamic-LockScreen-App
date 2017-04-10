@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/tutorial"
+            android:icon="@drawable/tutorial"
+            android:title="Tutorial" />
+
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/aboutus"
+            android:title="About Us" />
+
+        <menu>
+            <item
+                android:id="@+id/change_mp"
+                android:icon="@drawable/setuppass"
+                android:title="Change the master PIN" />
+
+        </menu>
+
+        <menu>
+            <item
+                android:id="@+id/uninstall"
+
+                android:title="Uninstall" />
+
+        </menu>
+    </group>
+
+</menu>

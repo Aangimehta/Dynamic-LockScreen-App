@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4E5180</color>
+    <color name="colorPrimaryDark">#1D2951</color>
+    <color name="colorAccent">#009688</color>
+
+    <!--SCreenbackground -->
+    <color name="screen_1">#f64c73</color>
+    <color name="screen_2">#20d2bb</color>
+    <color name="screen_3">#3395ff</color>
+    <color name="screen_4">#c873f4</color>
+
+</resources>
